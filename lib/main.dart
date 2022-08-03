@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Edil-Oral App',
-      home: isLoginReq ? const AuthGate() : const InitialWidget(),
+      home: const InitialWidget(),
       theme: ThemeData.dark(),
     );
   }

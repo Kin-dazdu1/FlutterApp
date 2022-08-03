@@ -45,19 +45,20 @@ class _InitialWidget extends State<InitialWidget> {
                               style: TextStyle(
                                   fontSize: 17, fontWeight: FontWeight.bold)))
                     ]),
-            IconButton(
-              icon: const Icon(Icons.logout),
-              tooltip: "Log out",
-              onPressed: () async {
-                SharedPreferences preferences =
-                    await SharedPreferences.getInstance();
-                preferences.remove("email");
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const AuthGate()));
-                const SnackBar(content: Text("Successfully logged out"))
-                    .show(context);
-              },
-            ),
+            // removed logout button
+            // IconButton(
+            //   icon: const Icon(Icons.logout),
+            //   tooltip: "Log out",
+            //   onPressed: () async {
+            //     SharedPreferences preferences =
+            //         await SharedPreferences.getInstance();
+            //     preferences.remove("email");
+            //     Navigator.pushReplacement(context,
+            //         MaterialPageRoute(builder: (context) => const AuthGate()));
+            //     const SnackBar(content: Text("Successfully logged out"))
+            //         .show(context);
+            //   },
+            // ),
           ],
         )),
         body: ListView(children: [
